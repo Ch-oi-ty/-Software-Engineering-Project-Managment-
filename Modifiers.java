@@ -1,5 +1,5 @@
 class Person {
-    private String name;  // private: accessible only within the class
+    private String name;  
 
     public void setName(String newName) {
         name = newName;
