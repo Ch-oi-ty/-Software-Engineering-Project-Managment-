@@ -20,7 +20,7 @@ class Bicycle {
 
 public class choity {
     public static void main(String[] args) {
-        Bicycle myBike = new Bicycle("Mountain Bike", 21); // object creation using constructor
+        Bicycle myBike = new Bicycle("Mountain Bike", 21); 
         myBike.ride();
         myBike.displayInfo();
     }
