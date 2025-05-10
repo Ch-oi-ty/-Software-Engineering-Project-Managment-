@@ -85,6 +85,52 @@ class Bike extends Vehicle implements Engine {
     }
 }
 
-// Boat class
+// Boat class (corrected)
 class Boat extends Vehicle implements Engine {
-    public Boat(String brand, int year, int ho
+    public Boat(String brand, int year, int horsepower) {
+        super(brand, year, horsepower);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Boat engine started.");
+    }
+
+    @Override
+    public void stopEngine() {
+        System.out.println("Boat engine stopped.");
+    }
+
+    @Override
+    void drive() {
+        System.out.println("Sailing a boat.");
+    }
+}
+
+// Main class to run the program
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", 2020, 150);
+        Bike bike = new Bike("Yamaha", 2019, 100);
+        Boat boat = new Boat("Bayliner", 2018, 200);
+
+        car.startEngine();
+        car.drive();
+        car.displayInfo();
+        car.stopEngine();
+
+        System.out.println();
+
+        bike.startEngine();
+        bike.drive();
+        bike.displayInfo();
+        bike.stopEngine();
+
+        System.out.println();
+
+        boat.startEngine();
+        boat.drive();
+        boat.displayInfo();
+        boat.stopEngine();
+    }
+}
