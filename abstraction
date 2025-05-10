@@ -1,0 +1,90 @@
+// Interface: defines engine behavior that all vehicles must implement
+interface Engine {
+    void startEngine();
+    void stopEngine();
+}
+
+// Concrete Engine class: holds engine-related properties
+class EngineDetails {
+    private int horsepower;
+
+    public EngineDetails(int horsepower) {
+        this.horsepower = horsepower;
+    }
+
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    public void displayEngineSpecs() {
+        System.out.println("Engine Horsepower: " + horsepower + " HP");
+    }
+}
+
+// Abstract class: base class for all vehicles
+abstract class Vehicle {
+    String brand;
+    int year;
+    EngineDetails engineDetails;
+
+    public Vehicle(String brand, int year, int horsepower) {
+        this.brand = brand;
+        this.year = year;
+        this.engineDetails = new EngineDetails(horsepower);
+    }
+
+    abstract void drive();
+
+    public void displayInfo() {
+        System.out.println("Brand: " + brand + ", Year: " + year);
+        engineDetails.displayEngineSpecs();
+    }
+}
+
+// Car class
+class Car extends Vehicle implements Engine {
+    public Car(String brand, int year, int horsepower) {
+        super(brand, year, horsepower);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Car engine started.");
+    }
+
+    @Override
+    public void stopEngine() {
+        System.out.println("Car engine stopped.");
+    }
+
+    @Override
+    void drive() {
+        System.out.println("Driving a car.");
+    }
+}
+
+// Bike class
+class Bike extends Vehicle implements Engine {
+    public Bike(String brand, int year, int horsepower) {
+        super(brand, year, horsepower);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Bike engine started.");
+    }
+
+    @Override
+    public void stopEngine() {
+        System.out.println("Bike engine stopped.");
+    }
+
+    @Override
+    void drive() {
+        System.out.println("Riding a bike.");
+    }
+}
+
+// Boat class
+class Boat extends Vehicle implements Engine {
+    public Boat(String brand, int year, int ho
