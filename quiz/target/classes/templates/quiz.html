@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="bn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>বাংলা কুইজ</title>
+</head>
+<body>
+<h2>বাংলা কুইজ</h2>
+<form action="/submit" method="post">
+    <label>শিক্ষার্থীর আইডি:</label><br>
+    <input type="text" name="studentId" required><br><br>
+
+    <p>১. ১২ × ৪ এর ফলাফল কত?</p>
+    <input type="radio" name="q1" value="৪৮" required> ৪৮<br>
+    <input type="radio" name="q1" value="৪৪"> ৪৪<br>
+    <input type="radio" name="q1" value="৪৬"> ৪৬<br>
+    <input type="radio" name="q1" value="৪২"> ৪২<br><br>
+
+    <p>২. ১৫ + ৯ এর ফলাফল কত?</p>
+    <input type="radio" name="q2" value="২৩" required> ২৩<br>
+    <input type="radio" name="q2" value="২৪"> ২৪<br>
+    <input type="radio" name="q2" value="২৫"> ২৫<br>
+    <input type="radio" name="q2" value="২৬"> ২৬<br><br>
+
+    <button type="submit">জমা দিন</button>
+</form>
+</body>
+</html>

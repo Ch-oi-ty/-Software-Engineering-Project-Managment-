@@ -1,0 +1,4 @@
+com\example\quiz\repository\QuizScoreRepository.class
+com\example\quiz\model\QuizScore.class
+com\example\quiz\controller\QuizController.class
+com\example\quiz\QuizApplication.class
